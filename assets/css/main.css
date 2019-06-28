@@ -9,15 +9,21 @@
   background-color: #e42c64;
 }
 
-.nav-text{
+.nav-text, .nav-btn{
   color: #ffffff;
+  margin: 15px;
 }
 
 .nav-text h1{
   font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
 .nav-btn button{
   background-color: #614ad3;
-  font-size: 0.5em;
+  font-size: 1.0em;
+  padding: 15px;
+  border-radius: 15px;
+  border-color: #614ad3;
+  color: #ffffff;
 }
