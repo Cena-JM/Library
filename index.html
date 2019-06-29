@@ -20,7 +20,23 @@
         </div>
     </header>
     <main>
-        
+        <div id="modal">
+            <div class="form-content">
+                <span class="close">&times;</span>
+                <h3 class="form-heading">Add a book</h3>
+                <form id="add-book-form">
+                    <input type="text" id="title" placeholder="Book title">
+                    <input type="text" id="author" placeholder="Author name">
+                    <input type="number" id="pages" placeholder="No of pages" min="0">
+                    <div>
+                        <label class="read-txt">Read?</label>
+                        <input type="checkbox" name="read-status" id="read">
+                    </div>
+                    <input type="submit" value="Add book">
+                </form>
+            </div>
+        </div>
     </main>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
