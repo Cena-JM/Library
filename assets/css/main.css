@@ -31,11 +31,18 @@ body{
   color: #ffffff;
 }
 
+.hd{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background: rgb(133, 32, 32);
+  color: #f2f2f2;
+}
 .collection{
   margin: 0 auto;
   background: rgb(255, 240, 240);
   width: 840px;
-  padding: 40px 20px;
+  padding: 0 20px 40px 20px;
   font-size: 12px;
   color: rgb(0, 0, 0);
 }
@@ -44,12 +51,16 @@ body{
   height: 60px;
   display: flex;
   align-items: center;
+  border-radius: 4px;
 }
 
 .head{
   font-weight: bolder;
   text-transform: uppercase;
   font-size: 14px;
+  width: 840px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .pd{
@@ -65,28 +76,27 @@ body{
   border: none;
 }
 
-.light{
-  background: rgb(218, 132, 132);
-  border-bottom: 1px solid rgb(218, 132, 132);
-  border-radius: 4px;
-}
-
-.light:hover{
-  background: rgb(255, 230, 230);
-  font-size: 14px;
-}
-
-.dark{
+.book:nth-child(odd) {
   background: rgb(177, 60, 60);
-  border-radius: 4px;
 }
 
-
-.dark:hover{
+.book:nth-child(odd):hover {
   background: rgb(92, 14, 14);
   font-size: 14px;
   color: #f2f2f2;
 }
+
+.book:nth-child(even) {
+  background: rgb(218, 132, 132);
+  border-bottom: 1px solid rgb(218, 132, 132);
+}
+
+.book:nth-child(even):hover {
+  background: rgb(255, 230, 230);
+  font-size: 14px;
+}
+
+
 /* modal form */
 
 #modal {

@@ -52,9 +52,9 @@ function render(){
   }
   myLibary.forEach((book) => {
     const row = document.createElement('div');
-    row.setAttribute("class", "book flex-box");
+    row.setAttribute("class", "book");
     const ico = document.createElement('span');
-    ico.setAttribute("class", "pd ico col-sm-1")
+    ico.setAttribute("class", "pd ico col-sm-1 fas fa-book")
     const title = document.createElement('span');
     title.setAttribute("class", "pd title col-sm-4");
     title.textContent = book.title;
@@ -65,10 +65,13 @@ function render(){
     pages.setAttribute("class", "pd pages col-sm-2");
     pages.textContent = book.pages;
     const read = document.createElement('span');
-    read.setAttribute('class', "pd status col-sm-1");
-    read.textContent = book.read;
+    if (book.read == 'read') {
+      read.setAttribute('class', "pd status col-sm-1 fas fa-check");
+    } else {
+      read.setAttribute('class', "pd status col-sm-1 far fa-square");
+    }
     const del = document.createElement('span');
-    del.setAttribute("class", "pd delete col-sm-1");
+    del.setAttribute("class", "pd delete col-sm-1 fas fa-trash");
     row.appendChild(ico);
     row.appendChild(title);
     row.appendChild(author);
