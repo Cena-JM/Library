@@ -1,8 +1,7 @@
 /* global document */
 let close_modal = document.getElementsByClassName("close")[0];
 let modal = document.getElementById("modal");
-let open_modal = document.getElementById('new-book-btn'); 
-let submit_button = document.querySelector("#create-book");
+let open_modal = document.getElementById("new-book-btn"); 
 
 
 // libary scripts
@@ -22,13 +21,13 @@ class Book{
 }
 
 function addBookToLibary(title, author, pages, read){
-  // create book object
-  const new_book = new Book(title, author, pages, read);
-  // push book into libary array
-  myLibary.push(new_book);
-  modal.classList.remove('show');
-  modal.classList.add('hidden');
-  render();
+    // create book object
+    const new_book = new Book(title, author, pages, read);
+    // push book into libary array
+    myLibary.push(new_book);
+    modal.classList.remove("show");
+    modal.classList.add("hidden");
+    render();
 }
 
 function deleteBookFromLibary(book_idx){
@@ -77,7 +76,7 @@ function render(){
         del.addEventListener("click", () => {
             idx = del.parentElement.getAttribute("data-index");
             deleteBookFromLibary(idx);
-        })
+        });
 
         row.appendChild(ico);
         row.appendChild(title);
@@ -86,7 +85,7 @@ function render(){
         row.appendChild(read);
         row.appendChild(del);
         collection.appendChild(row);
-    })
+    });
 }
 
 function clear(){
@@ -95,16 +94,16 @@ function clear(){
     document.getElementById("pages").value = "";
 }
 
-document.getElementById('add-book-form').addEventListener('submit', (e)=> {
-  e.preventDefault();
-  // get book values
-  let title = document.getElementById('title').value;
-  let author = document.getElementById('author').value;
-  let pages = document.getElementById('pages').value;
-  let read = document.getElementById('read').checked;
-  addBookToLibary(title, author, pages, read);
-  clear();
-})
+document.getElementById("add-book-form").addEventListener('submit', (e)=> {
+    e.preventDefault();
+    // get book values
+    let title = document.getElementById("title").value;
+    let author = document.getElementById("author").value;
+    let pages = document.getElementById("pages").value;
+    let read = document.getElementById("read").checked;
+    addBookToLibary(title, author, pages, read);
+    clear();
+});
 
 
 // modal scripts
@@ -113,15 +112,16 @@ open_modal.addEventListener("click", () => {
         modal.classList.remove("hidden");
         modal.classList.add("show");
     }
-})
+});
 
 close_modal.addEventListener("click", () =>  {
     if (modal.classList.value === "show") {
         modal.classList.remove("show");
         modal.classList.add("hidden");
     }
-})
+});
 
+/* maing window */
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.classList.remove("show"); 
