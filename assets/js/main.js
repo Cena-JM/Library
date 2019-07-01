@@ -94,7 +94,7 @@ function clear(){
     document.getElementById("pages").value = "";
 }
 
-document.getElementById("add-book-form").addEventListener('submit', (e)=> {
+document.getElementById("add-book-form").addEventListener("submit", (e)=> {
     e.preventDefault();
     // get book values
     let title = document.getElementById("title").value;
@@ -121,12 +121,11 @@ close_modal.addEventListener("click", () =>  {
     }
 });
 
-/* maing window */
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.classList.remove("show"); 
         modal.classList.add("hidden");
     }
-}
+};
 
 render();
