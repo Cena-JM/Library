@@ -190,3 +190,9 @@ body{
 .show{
   display: block;
 }
+
+/* row styles */
+
+.status{
+  font-size: 1.5em;
+}

@@ -62,9 +62,9 @@ function render(){
 
         const read = document.createElement("span");
         if (book.read) {
-            read.setAttribute("class", "pd status col-sm-1 fas fa-check");
+            read.setAttribute("class", "pd status col-sm-1 fas fa-toggle-on");
         } else {
-            read.setAttribute("class", "pd status col-sm-1 far fa-square");
+            read.setAttribute("class", "pd status col-sm-1 fas fa-toggle-off");
         }
         read.addEventListener("click", ()=> {
             book.toggleReadStatus();
