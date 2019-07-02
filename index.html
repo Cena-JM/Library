@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="nav-text">
+                <h1>My Library</h1>
+            </div>
+            <div class="nav-btn" id="new-book">
+                <button id="new-book-btn">Add New Book</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <br>
+        <div class="head">
+            <div class="hd">
+                <span class="pd ico col-sm-1"><i class="fas fa-book-reader"></i></span>
+                <span class="pd title col-sm-4">Title</span>
+                <span class="pd author col-sm-3">Author</span>
+                <span class="pd pages col-sm-2">Pages</span>
+                <span class="pd col-sm-1">Read</span>
+                <span class="pd delete col-sm-1"><i class="fas fa-minus-circle"></i></span>
+            </div>
+        </div>
+        <div id="collection" class="collection">
+            <!-- render JavaScript -->
+        </div>
+        <div id="modal" class="hidden">
+            <div class="form-content">
+                <span class="close">&times;</span>
+                <h3 class="form-heading">Add a book</h3>
+                <form id="add-book-form">
+                    <input type="text" id="title" placeholder="Book title">
+                    <input type="text" id="author" placeholder="Author name">
+                    <input type="number" id="pages" placeholder="No of pages" min="0">
+                    <div>
+                        <label class="read-txt">Read?</label>
+                        <input type="checkbox" name="read-status" id="read">
+                    </div>
+                    <input type="submit" value="Add book" id="create-book">
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
